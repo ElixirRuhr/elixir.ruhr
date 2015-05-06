@@ -3,7 +3,7 @@ sass:
   style: :compressed
 defaults:
   -
-    scope: 
+    scope:
       path: "" # addresses every file
     values:
       layout: default
