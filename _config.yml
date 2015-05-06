@@ -1,0 +1,9 @@
+markdown: redcarpet
+sass:
+  style: :compressed
+defaults:
+  -
+    scope: 
+      path: "" # addresses every file
+    values:
+      layout: default
