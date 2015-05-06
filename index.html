@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -8,14 +8,26 @@
 
   <style type="text/css">
     body {
-      font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+      font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
       font-weight: 300;
-      width: 100%;
       text-align: center;
     }
 
+    a:link, a:visited {
+      color: purple;
+    }
+
+    a:hover {
+      color: #36454F; /* charcoal */
+    }
+
+    a:active{
+      color: #000;
+    }
+
     h1 {
-      font-size: 72pt;
+      font-size: 6em;
+      margin: 1.2em 0;
     }
 
     h1 span.elixir {
@@ -25,18 +37,38 @@
     h1 span.ruhr {
       color: #36454F; /* charcoal */
     }
+
+    section {
+      margin: 6em 0;
+    }
+
+    footer ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    footer ul li {
+      line-height: 1.5em;
+    }
   </style>
 </head>
 <body>
-  <h1>
-    <span class="elixir">Elixir</span><span class="ruhr">Ruhr</span>
-  </h1>
-  <p>
-    Elixir meetup in the <a href="http://en.wikipedia.org/wiki/Ruhr">Ruhr region</a>
-  </p>
-
+  <header>
+    <h1>
+      <span class="elixir">Elixir</span><span class="ruhr">Ruhr</span>
+    </h1>
+  </header>
+  <section>
+    <p>
+      Elixir meetup in the <a href="http://en.wikipedia.org/wiki/Ruhr">Ruhr region</a>
+    </p>
+  </section>
   <footer>
-    <a href="https://github.com/ElixirRuhr/ElixirRuhr.github.io">GitHub page</a>
+    <ul>
+      <li><a href="https://github.com/ElixirRuhr/ElixirRuhr.github.io">GitHub page</a></li>
+      <li><a href="https://gitter.im/ElixirRuhr/ElixirRuhr">Gitter chat</a></li>
+    </ul>
   </footer>
 </body>
 </html>
