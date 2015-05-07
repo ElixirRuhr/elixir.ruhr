@@ -1,0 +1,53 @@
+---
+# this ensures Jekyll reads the file to be transformed into CSS later
+# only Main files contain this front matter, not partials.
+---
+
+$purple: purple;
+$charcoal: #36454f;
+$black: #000;
+
+body {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+  text-align: center;
+}
+
+a:link, a:visited {
+  color: $purple;
+}
+
+a:hover {
+  color: $charcoal;
+}
+
+a:active{
+  color: $black;
+}
+
+h1 {
+  font-size: 6em;
+  margin: 1.2em 0;
+}
+
+h1 span.elixir {
+  color: purple;
+}
+
+h1 span.ruhr {
+  color: $charcoal;
+}
+
+section {
+  margin: 6em 0;
+}
+
+footer ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+footer ul li {
+  line-height: 1.5em;
+}
