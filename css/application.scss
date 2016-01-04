@@ -3,51 +3,25 @@
 # only Main files contain this front matter, not partials.
 ---
 
-$purple: purple;
-$charcoal: #36454f;
-$black: #000;
+@import "vendor/normalize";
+@import "bourbon";
+@import "neat";
 
-body {
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-weight: 300;
-  text-align: center;
-}
+$action-color: #432460;
+$silent-color: #36454f;
+$dark-color: #000;
 
-a:link, a:visited {
-  color: $purple;
-}
+$base-spacing: 1.5em;
+$medium-screen: em(640);
+$large-screen: em(860);
 
-a:hover {
-  color: $charcoal;
-}
+@import "typography";
+@import "footer";
 
-a:active{
-  color: $black;
-}
-
-h1 {
-  font-size: 6em;
-  margin: 1.2em 0;
-}
-
-h1 span.elixir {
-  color: purple;
-}
-
-h1 span.ruhr {
-  color: $charcoal;
+header.main {
+  margin: 6em 0;
 }
 
 section {
   margin: 6em 0;
-}
-
-footer ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-footer ul li {
-  line-height: 1.5em;
 }

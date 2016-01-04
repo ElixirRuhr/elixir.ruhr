@@ -1,0 +1,21 @@
+body {
+  font-family: $helvetica;
+  font-weight: 300;
+  text-align: center;
+}
+
+a {
+  $link-color: $action-color;
+  $link-hover-color: $silent-color;
+  $link-active-color: $dark-color;
+
+  &:link, &:visited {
+    color: $link-color;
+  }
+  &:hover {
+    color: $link-hover-color;
+  }
+  &:active {
+    color: $link-active-color;
+  }
+}
