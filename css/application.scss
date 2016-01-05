@@ -9,19 +9,24 @@
 
 $action-color: #432460;
 $silent-color: #36454f;
+$font-color: #333;
 $dark-color: #000;
 
 $base-spacing: 1.5em;
+$base-border-radius: 3px;
 $medium-screen: em(640);
 $large-screen: em(860);
 
+$mobile: new-breakpoint(max-width 500px 4);
+
 @import "typography";
 @import "footer";
+@import "functions";
 
-@mixin unstyled-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 header.main {
@@ -34,24 +39,68 @@ header.main {
 }
 
 section {
-  @include outer-container;
-
   > article {
+    @include outer-container;
     padding: $base-spacing;
+
+    &:after {
+      content: "________";
+      text-align: left;
+      display: block;
+      margin: $base-spacing 0 0 0;
+      color: lighten($silent-color, 50%);
+    }
+    &:last-child:after{
+      content: "";
+    }
   }
 }
 
 article.talks {
   ul.speakers {
     @include unstyled-list;
-    @include outer-container;
+    @include span-columns(12);
 
     > li {
-      @include span-columns(6);
-      text-align: center;
+      display: block;
+      margin-bottom: $base-spacing * 2;
 
-      h3, p {
-        margin: $base-spacing * 0.25;
+      h3 {
+        margin: $base-spacing * 0.25 0;
+      }
+
+      .speaker {
+        @include outer-container;
+
+        p {
+          margin: $base-spacing * 0.5 0;
+        }
+
+        .avatar {
+          @include span-columns(2 of 12);
+          @include media($mobile) {
+            @include span-columns(12 of 12);
+          }
+          text-align: center;
+
+          img {
+            @include round-image;
+            @include simple-shadow;
+            border: 4px solid white;
+            width: 100px;
+            margin: 20px auto 0 auto;
+          }
+        }
+        .bio {
+          @include span-columns(10 of 12);
+          @include media($mobile) {
+            @include span-columns(12 of 12);
+          }
+
+          .twitter {
+            @include with-brackets;
+          }
+        }
       }
     }
   }
