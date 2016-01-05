@@ -55,8 +55,9 @@ namespace :site do
     checkout_options = []
     push_options     = %w(--quiet)
 
-    # Detect master
-    if pull_request = ENV['TRAVIS_PULL_REQUEST'].to_s.to_i > 0
+    # Detect pull requests or master pushes
+    pull_request = ENV['TRAVIS_PULL_REQUEST'].to_s.to_i
+    if pull_request > 0
       destination_branch = "gh-pages-pr-#{pull_request}"
       checkout_options << "--orphan"
       push_options     << "--force"
