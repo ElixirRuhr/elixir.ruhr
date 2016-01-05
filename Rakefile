@@ -54,9 +54,9 @@ namespace :site do
 
   desc "Generate the site and push changes to remote origin"
   task :deploy do
-    # Detect pull request
-    if ENV['TRAVIS_PULL_REQUEST'].to_s.to_i > 0
-      puts 'Pull request detected. Not proceeding with deploy.'
+    # Detect master
+    unless ENV['TRAVIS_BRANCH'] == "master"
+      puts 'Non master branch detected. Not proceeding with deploy.'
       exit
     end
 
@@ -70,7 +70,6 @@ namespace :site do
     # Make sure destination folder exists as git repo
     check_destination
 
-    sh "git checkout #{SOURCE_BRANCH}"
     Dir.chdir(CONFIG["destination"]) { sh "git checkout #{DESTINATION_BRANCH}" }
 
     # Generate the site
