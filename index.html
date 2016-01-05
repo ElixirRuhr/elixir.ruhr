@@ -8,22 +8,112 @@
   <link rel="stylesheet" href="/css/application.css">
 </head>
 <body class="home">
-  <header>
+  <header class="main" role="banner">
     <h1>
-      <img src="/images/elixir_ruhr_logo.png" alt="Elixir Ruhr Logo">
+      <a href="/">
+        <img src="/images/elixir_ruhr_logo.png" alt="Elixir Ruhr Logo">
+      </a>
     </h1>
+    <ul class="next-meetup">
+      <li>Next Meetup: XX.XX.XXXX</li>
+      <li>Entry: XX:XX</li>
+      <li>Talks: XX:XX</li>
+      <li><a href="http://www.meetup.com/ElixirRuhr/events/226415527/?eventId=226415527">RSVP</a></li>
+    </ul>
   </header>
   <section>
-    <p>Elixir meetup in the <a href="http://en.wikipedia.org/wiki/Ruhr">Ruhr region</a></p>
+    <article class="about">
+  <h2>About</h2>
+  <p>
+    We kindly invite you to our first Elixir meetup in the
+    <a href="https://en.wikipedia.org/wiki/Ruhr">Ruhr region</a>.
+    We are a group of enthusiastic software developers mostly with a strong
+    <a href="https://www.ruby-lang.org">Ruby</a> background
+  </p>
+  <p>
+    Doors will be opened starting at XX:XX, the talks will start at XX:XX.
+    The event will be free, but with a limited amount of space.
+    Please use our
+    <a href="http://www.meetup.com/ElixirRuhr/events/226415527/?eventId=226415527">Meetup page</a>
+    for RSVP.
+  </p>
+</article>
+
+<article class="talks">
+  <h2>Talks</h2>
+  <ul class="speakers">
+    <li>
+      <h3>
+        <span class="person">John Doe:</span>
+        Some title of the talk
+      </h3>
+      <div class="speaker">
+        <div class="avatar">
+          <img src="https://placehold.it/150x150" alt="Avatar of XX"/>
+        </div>
+        <div class="bio">
+          <p>
+            John
+            <span class="twitter">
+              <a href="https://twitter.com/john">@john</a>
+            </span>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
+      </div>
+    </li>
+    <li>
+      <h3>
+        <span class="person">John Doe:</span>
+        Some title of the talk
+      </h3>
+      <div class="speaker">
+        <div class="avatar">
+          <img src="https://placehold.it/150x150" alt="Avatar of XX"/>
+        </div>
+        <div class="bio">
+          <p>
+            John
+            <span class="twitter">
+              <a href="https://twitter.com/john">@john</a>
+            </span>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
+      </div>
+    </li>
+  </ul>
+</article>
+
+<article class="location">
+  <h2>Location</h2>
+  <iframe src="https://www.google.com/maps/embed?origin=mfe&pb=!1m3!2m1!1sDas+Labor+Bochum!6i17!3m1!1sde!5m1!1sde"></iframe>
+</article>
 
   </section>
-  <footer>
-    <ul>
-      <li><a href="https://twitter.com/ElixirRuhr">Twitter</a></li>
-      <li><a href="https://github.com/ElixirRuhr/ElixirRuhr.github.io">GitHub page</a></li>
-      <li><a href="https://gitter.im/ElixirRuhr/ElixirRuhr">Gitter chat</a></li>
-      <li><a href="http://www.meetup.com/ElixirRuhr">Meetup</a></li>
-    </ul>
+  <footer class="main" role="contentinfo">
+    <div class="footer-links">
+      <ul>
+        <li><h3>Connect</h3></li>
+        <li><a href="https://twitter.com/ElixirRuhr">Twitter</a></li>
+        <li><a href="https://gitter.im/ElixirRuhr/ElixirRuhr">Gitter chat</a></li>
+        <li><a href="http://www.meetup.com/ElixirRuhr">Meetup</a></li>
+      </ul>
+      <ul>
+        <li><h3>Contribute</h3></li>
+        <li><a href="https://github.com/ElixirRuhr/orga/issues">GitHub issues</a></li>
+        <li><a href="https://github.com/ElixirRuhr/ElixirRuhr.github.io">GitHub page</a></li>
+      </ul>
+      <ul>
+        <li><h3>Legal</h3></li>
+        <li><a href="/imprint.html">Impressum</a></li>
+        <li><a href="/privacy_policy.html">Datenschutzerklärung</a></li>
+      </ul>
+    </div>
+    <hr>
+    <p>
+      Copyright &copy; 2016 ElixirRuhr
+    </p>
   </footer>
 </body>
 </html>
