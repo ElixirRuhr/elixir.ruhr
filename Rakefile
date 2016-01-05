@@ -13,8 +13,6 @@ CONFIG = YAML.load(File.read('_config.yml'))
 
 USERNAME = "ElixirRuhr"
 REPO = "elixir.ruhr"
-SOURCE_BRANCH = "master"
-DESTINATION_BRANCH = "gh-pages"
 
 #############################################################################
 #
@@ -54,8 +52,17 @@ namespace :site do
 
   desc "Generate the site and push changes to remote origin"
   task :deploy do
+    checkout_options = []
+    push_options     = %w(--quiet)
+
     # Detect master
-    unless ENV['TRAVIS_BRANCH'] == "master"
+    if pull_request = ENV['TRAVIS_PULL_REQUEST'].to_s.to_i > 0
+      destination_branch = "gh-pages-pr-#{pull_request}"
+      checkout_options << "--orphan"
+      push_options     << "--force"
+    elsif ENV['TRAVIS_BRANCH'] == "master"
+      destination_branch = "gh-pages"
+    else
       puts 'Non master branch detected. Not proceeding with deploy.'
       exit
     end
@@ -70,7 +77,9 @@ namespace :site do
     # Make sure destination folder exists as git repo
     check_destination
 
-    Dir.chdir(CONFIG["destination"]) { sh "git checkout #{DESTINATION_BRANCH}" }
+    Dir.chdir(CONFIG["destination"]) do
+      sh "git checkout #{checkout_options.join(" ")} #{destination_branch}"
+    end
 
     # Generate the site
     sh "bundle exec jekyll build"
@@ -80,8 +89,8 @@ namespace :site do
     Dir.chdir(CONFIG["destination"]) do
       sh "git add --all ."
       sh "git commit -m 'Updating to #{USERNAME}/#{REPO}@#{sha}.'"
-      sh "git push --quiet origin #{DESTINATION_BRANCH}"
-      puts "Pushed updated branch #{DESTINATION_BRANCH} to GitHub Pages"
+      sh "git push #{push_options.join(" ")} origin #{destination_branch}"
+      puts "Pushed updated branch #{destination_branch} to GitHub Pages"
     end
   end
 end
