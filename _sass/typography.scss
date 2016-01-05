@@ -89,6 +89,12 @@ body {
   hr {
     width: 3em;
   }
+
+  address {
+    font-style: normal;
+    line-height: $base-line-height;
+    margin-bottom: 1.5em;
+  }
 }
 
 a {
