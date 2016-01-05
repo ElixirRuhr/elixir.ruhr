@@ -1,7 +1,7 @@
 markdown: redcarpet
 sass:
   style: :compressed
-exclude: ["CNAME", "Gemfile*", "README.md"]
+exclude: ["Rakefile", "Gemfile*", "README.md"]
 destination: _site
 branch: source
 defaults:

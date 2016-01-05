@@ -75,7 +75,6 @@ namespace :site do
 
     # Generate the site
     sh "bundle exec jekyll build"
-    sh "cp CNAME #{CONFIG["destination"]}"
 
     # Commit and push to github
     sha = `git log`.match(/[a-z0-9]{40}/)[0]
