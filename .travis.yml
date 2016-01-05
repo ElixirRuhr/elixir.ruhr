@@ -1,8 +1,6 @@
 language: ruby
 cache: bundler
 sudo: false
-install:
-  - bundle install
 script: bundle exec rake site:deploy --quiet
 rvm: "2.2"
 env:
