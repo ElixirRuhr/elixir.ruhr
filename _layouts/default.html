@@ -8,21 +8,49 @@
   <link rel="stylesheet" href="/css/application.css">
 </head>
 <body class="{{ page.section }}">
-  <header>
+  <header class="main" role="banner">
     <h1>
-      <img src="/images/elixir_ruhr_logo.png" alt="Elixir Ruhr Logo">
+      <a href="/">
+        <img src="/images/elixir_ruhr_logo.png" alt="Elixir Ruhr Logo">
+      </a>
     </h1>
+    <ul class="next-meetup">
+      <li>Next Meetup: 11<sup>th</sup> Feb 2016</li>
+      <li>Entry: 18:30</li>
+      <li>Talks: 19:00</li>
+      <li><a href="http://www.meetup.com/ElixirRuhr/events/226415527/?eventId=226415527">RSVP</a></li>
+    </ul>
   </header>
   <section>
     {{ content }}
   </section>
-  <footer>
-    <ul>
-      <li><a href="https://twitter.com/ElixirRuhr">Twitter</a></li>
-      <li><a href="https://github.com/ElixirRuhr/ElixirRuhr.github.io">GitHub page</a></li>
-      <li><a href="https://gitter.im/ElixirRuhr/ElixirRuhr">Gitter chat</a></li>
-      <li><a href="http://www.meetup.com/ElixirRuhr">Meetup</a></li>
-    </ul>
+  <footer class="main" role="contentinfo">
+    <div class="footer-links">
+      <ul>
+        <li><h3>Connect</h3></li>
+        <li><a href="https://twitter.com/ElixirRuhr">Twitter</a></li>
+        <li><a href="https://gitter.im/ElixirRuhr/ElixirRuhr">Gitter chat</a></li>
+        <li><a href="http://www.meetup.com/ElixirRuhr">Meetup</a></li>
+      </ul>
+      <ul>
+        <li><h3>Contribute</h3></li>
+        <li><a href="/coc.html">Code of Conduct</a></li>
+        <li><a href="https://github.com/ElixirRuhr/orga/issues">GitHub issues</a></li>
+        <li><a href="https://github.com/ElixirRuhr/elixir.ruhr">GitHub page</a></li>
+      </ul>
+      <ul>
+        <li><h3>Legal</h3></li>
+        <li><a href="/imprint.html">Impressum</a></li>
+        <li><a href="/privacy_policy.html">Datenschutzerklärung</a></li>
+      </ul>
+    </div>
+    <hr>
+    <p>
+      Copyright &copy; 2015-{{ site.time | date: "%Y" }} ElixirRuhr
+    </p>
+    <p>
+      <small>Updated at {{ site.time | date: "%F %X %Z" }}</small>
+    </p>
   </footer>
 </body>
 </html>

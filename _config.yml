@@ -3,7 +3,10 @@ sass:
   style: :compressed
 exclude: ["Rakefile", "Gemfile*", "README.md", "vendor"]
 destination: _site
-branch: source
+gems:
+  - bourbon
+  - jekyll-assets
+  - neat
 defaults:
   -
     scope:
