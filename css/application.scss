@@ -4,6 +4,8 @@
 ---
 
 @import "vendor/normalize";
+@import "vendor/photoswipe";
+@import "vendor/photoswipe-default-skin";
 @import "bourbon";
 @import "neat";
 
@@ -14,16 +16,18 @@ $dark-color: #000;
 
 $base-spacing: 1.5em;
 $base-border-radius: 3px;
+$small-screen: em(0);
 $medium-screen: em(640);
 $large-screen: em(860);
 
 $mobile: new-breakpoint(max-width 500px 4);
 
 @import "typography";
-@import "footer";
 @import "functions";
+@import "footer";
 @import "navigation";
 @import "meetups";
+@import "gallery";
 
 img {
   max-width: 100%;

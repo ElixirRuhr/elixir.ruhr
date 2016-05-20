@@ -171,6 +171,7 @@ PLATFORMS
 
 DEPENDENCIES
   bourbon
+  fastimage
   github-pages
   jekyll-assets
   neat
