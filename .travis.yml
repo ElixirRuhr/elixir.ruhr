@@ -6,3 +6,12 @@ rvm: "2.2"
 env:
   global:
     secure: "vTaKTElw9L/TczLo1of6EfNUG2gMdRAqlLI4V+4XH8NnpIvax4aBx/KHT2FZVIw0YcpJ5DcNAx8S2UXxrbZgALmkTQIQwQRBPm77eH2uQsJtYZPI1zeQF0HoqPD5cx07nLyvSMbLnRgsXrUTAdSqcyhn+AR5ZB7XS66sQ4yvhSZxirreBE0mDK/w9Yol35gj7+2dwHjNBm0LFOByW1PLc8LAHJnpBCLH61y4L5tdqOkJtAgmZNSzQVjMwmPnK+IpA7W86NqNs9fP13y7TV0bP7Y/rrJvXQzrOhlOSt/xBnUuSViqreuyYFCD2uZmTR3xGwj/jt1RR4bNbwoqKLCIfQrgqBgM9jsZ6nMb9mFIfaQ2gTxjPVQeAYE3rYNiAJamnSvA58JE1+wJo+KlZM5OFKmbA3+NL2O71itEQP7MKi7a9U94LSywowwkEUrYYiOYflSVoi+NUgweQKgCFhQ3VrXKihyoMWaJ8vHtaP41cBZZFyFlSB9dhxAXS9poPC/g5iKnu7rOs14rcrMVuyk+ri3po6fHVnpnPlxo4yD2Wiy07zGsye/c2LHxvKBo2lWzgFdzvtcCt8Z4bH+SvP+raIkIG6UUUD2CEqQHtf3XKys0jSpfTtc6FZyyYSiTqM6XTydr7ihJGwToeT/tsKSQhxCta5KzDSPhJ/GmuI4peSA="
+before_install:
+  - mkdir -p $HOME/bin
+  - wget https://github.com/github/git-lfs/releases/download/v1.1.2/git-lfs-linux-amd64-1.1.2.tar.gz
+  - tar xvfz git-lfs-linux-amd64-1.1.2.tar.gz && rm git-lfs-linux-amd64-1.1.2.tar.gz
+  - mv git-lfs-1.1.2/git-lfs $HOME/bin/git-lfs && rm -R git-lfs-1.1.2
+  - export PATH=$PATH:$HOME/bin/
+  - git-lfs install
+  - git-lfs env
+  - git-lfs pull
