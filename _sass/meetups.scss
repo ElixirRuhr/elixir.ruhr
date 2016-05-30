@@ -1,8 +1,20 @@
 body.meetups {
   article.talks {
-    ul.speakers {
+    ul.talk-list {
       @include unstyled-list;
       @include span-columns(12);
+
+      a.slides{
+        @include add-icon($fa-var-picture-o);
+      }
+
+      a.twitter{
+        @include add-icon($fa-var-twitter);
+      }
+
+      a.github{
+        @include add-icon($fa-var-github);
+      }
 
       > li {
         display: block;
@@ -12,12 +24,16 @@ body.meetups {
           margin: $base-spacing * 0.25 0;
         }
 
+        ul.links {
+          @include inline-list;
+        }
+
+        p {
+          margin: $base-spacing * 0.5 0;
+        }
+
         .speaker {
           @include outer-container;
-
-          p {
-            margin: $base-spacing * 0.5 0;
-          }
 
           .avatar {
             @include span-columns(2 of 12);
@@ -38,10 +54,6 @@ body.meetups {
             @include span-columns(10 of 12);
             @include media($mobile) {
               @include span-columns(12 of 12);
-            }
-
-            .twitter {
-              @include with-brackets;
             }
           }
         }
