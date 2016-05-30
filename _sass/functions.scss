@@ -29,3 +29,11 @@
     margin-left: $distance;
   }
 }
+
+@mixin add-icon($icon){
+  &:before {
+    @include fa-icon();
+    content: $icon;
+    margin-right: 5px;
+  }
+}

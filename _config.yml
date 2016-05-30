@@ -17,3 +17,5 @@ collections:
   meetups:
     output: true
     permalink: /meetups/:path/
+sass:
+  style: compressed
