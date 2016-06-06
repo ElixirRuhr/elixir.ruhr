@@ -13,3 +13,9 @@ defaults:
       path: "" # addresses every file
     values:
       layout: default
+collections:
+  meetups:
+    output: true
+    permalink: /meetups/:path/
+sass:
+  style: compressed

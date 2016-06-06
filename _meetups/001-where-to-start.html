@@ -1,0 +1,121 @@
+---
+section: meetups
+number: 001
+title: Where to start?
+date: 2016-02-11 19:00:00
+archived: true
+---
+
+<article class="meetup meetup-001">
+  <h2>{{ page | meetup_title }}</h2>
+  <p>
+    Our first meetup happend on {{ page.date | nice_date }}.
+    Special thanks to our <a href="#sponsors">sponsors</a> for providing drinks and snacks.
+  </p>
+</article>
+
+<article class="talks">
+  <h2>Talks</h2>
+  <ul class="talk-list">
+    <li>
+      <h3>
+        René Föhring: Good tooling educates
+      </h3>
+      <ul class="links">
+        <li class="legend">Material:</li>
+        <li><a href="https://speakerdeck.com/rrrene/elixirruhr-dot-001-good-tooling-educates" class="slides">View slides</a></li>
+      </ul>
+      <p class="description">
+        Where are we in Elixir right now and what are the challenges faced by both newcomers and tool designers? This talk tries to answer these questions and advocates taking humans into account when designing even the nerdiest software tools.
+      </p>
+      <div class="speaker">
+        <div class="avatar">
+          <img src="/images/speakers/rrrene.png" alt="Avatar of @rrrene"/>
+        </div>
+        <div class="bio">
+          <p>
+            René started with BASIC at the age of 10 and has been employed as a coder since the age of 17. By now he has 10 years of Ruby and roughly 2 years of Elixir experience. According to unconfirmed sources, he describes himself as an "open source aficionado". He is the creator of
+            <a href="https://github.com/rrrene/credo">Credo</a>, a static code analysis tool for the Elixir language.
+          </p>
+          <ul class="links">
+            <li><a href="https://twitter.com/rrrene" class="twitter">@rrrene</a></li>
+            <li><a href="https://github.com/rrrene" class="github">rrrene</a></li>
+          </ul>
+        </div>
+      </div>
+    </li>
+    <li>
+      <h3>
+        Constantin Rack: Job scheduling in Elixir
+      </h3>
+      <ul class="links">
+        <li class="legend">Material:</li>
+        <li><a href="https://c-rack.github.io/job-scheduling-in-elixir/" class="slides">View slides</a></li>
+      </ul>
+      <p>
+        How to execute tasks periodically? How can we achieve this using a native Elixir implementation?
+        Learn about process communication and supervisors illustrated by the example of the cron-like scheduler
+        <a href="https://github.com/c-rack/quantum-elixir">Quantum</a>.
+      </p>
+      <div class="speaker">
+        <div class="avatar">
+          <img src="/images/speakers/ConstantinRack.png" alt="Avatar of @ConstantinRack"/>
+        </div>
+        <div class="bio">
+          <p>
+            Constantin creates software for over 20 years. In 2014, he stumbled upon
+            Elixir and was immediately captivated. If time permits he
+            contributes to various open source projects, for example his
+            well-known <a href="https://github.com/c-rack/quantum-elixir">Quantum
+            library</a>, a cron-like job scheduler for Elixir.
+          </p>
+          <ul class="links">
+            <li><a href="https://twitter.com/ConstantinRack" class="twitter">@ConstantinRack</a></li>
+            <li><a href="https://github.com/c-rack" class="github">c-rack</a></li>
+          </ul>
+        </div>
+      </div>
+    </li>
+  </ul>
+</article>
+
+<article class="gallery-wrapper">
+  <h2>Impressions</h2>
+  {% gallery 001 %}
+  images/galleries/001/img_0001.jpg
+  images/galleries/001/img_0002.jpg
+  images/galleries/001/img_0003.jpg
+  images/galleries/001/img_0004.jpg
+  images/galleries/001/img_0005.jpg
+  images/galleries/001/img_0006.jpg
+  images/galleries/001/img_0007.jpg
+  images/galleries/001/img_0008.jpg
+  images/galleries/001/img_0009.jpg
+  images/galleries/001/img_0010.jpg
+  images/galleries/001/img_0011.jpg
+  images/galleries/001/img_0012.jpg
+  images/galleries/001/img_0013.jpg
+  images/galleries/001/img_0014.jpg
+  images/galleries/001/img_0015.jpg
+  images/galleries/001/img_0016.jpg
+  images/galleries/001/img_0017.jpg
+  images/galleries/001/img_0018.jpg
+  images/galleries/001/img_0019.jpg
+  images/galleries/001/img_0020.jpg
+  images/galleries/001/img_0021.jpg
+  images/galleries/001/img_0022.jpg
+  images/galleries/001/img_0023.jpg
+  images/galleries/001/img_0024.jpg
+  images/galleries/001/img_0025.jpg
+  images/galleries/001/img_0026.jpg
+  images/galleries/001/img_0027.jpg
+  images/galleries/001/img_0028.jpg
+  images/galleries/001/img_0029.jpg
+  images/galleries/001/img_0030.jpg
+  images/galleries/001/img_0031.jpg
+  images/galleries/001/img_0032.jpg
+  images/galleries/001/img_0033.jpg
+  images/galleries/001/img_0034.jpg
+  images/galleries/001/img_0035.jpg
+  {% endgallery %}
+</article>

@@ -4,6 +4,14 @@
   padding: 0;
 }
 
+@mixin inline-list {
+  @include unstyled-list;
+  > li {
+    display: inline;
+    margin-right: 10px;
+  }
+}
+
 @mixin border-radius($radii) {
   @include border-top-radius($radii);
   @include border-right-radius($radii);
@@ -27,5 +35,13 @@
   &:after {
     content: ")";
     margin-left: $distance;
+  }
+}
+
+@mixin add-icon($icon){
+  &:before {
+    @include fa-icon();
+    content: $icon;
+    margin-right: 5px;
   }
 }

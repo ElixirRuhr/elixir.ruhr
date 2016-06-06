@@ -1,0 +1,29 @@
+article.sponsors {
+  > div {
+    @include outer-container;
+  }
+  a {
+    @include span-columns(3 of 12);
+    text-align: center;
+
+    &:first-child {
+      @include shift(3 of 12);
+    }
+
+    @include media($mobile) {
+      @include span-columns(6 of 12);
+      &:first-child {
+        @include shift(0 of 12);
+      }
+    }
+  }
+  img {
+    opacity: 0.5;
+    @include filter(grayscale(100%));
+    @include transition(all 0.3s ease-out);
+    &:hover {
+     opacity: 1;
+     @include filter(grayscale(0%));
+    }
+  }
+}

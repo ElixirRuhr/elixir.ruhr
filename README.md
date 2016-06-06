@@ -2,6 +2,14 @@
 
 Content for http://elixir.ruhr
 
+## Requirements
+
+To reduce the repository size we're using [Git LFS](https://git-lfs.github.com).
+Therefor you have to setup it before cloning this repository:
+
+1. Download the Git LFS
+2. Install the Git command line extension
+
 ## Installation
 
 Run the following command in your terminal using [Bundler](http://bundler.io)
