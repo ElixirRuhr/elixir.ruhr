@@ -13,16 +13,35 @@ section: home
 </article>
 
 <article class="meetups">
-  <h2>Past meetups</h2>
+  <h2>Next Meetup</h2>
+  <ul class="upcoming-meetups">
+    {% for meetup in site.meetups %}
+      {% if meetup.archived == false %}
+        <li>
+          <h3>
+            <a href="{{ meetup.url }}">
+              {{ meetup | meetup_title }}
+            </a>
+          </h3>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</article>
+
+<article class="meetups">
+  <h2>Past Meetups</h2>
   <ul class="past-meetups">
     {% for meetup in site.meetups %}
-      <li>
-        <h3>
-          <a href="{{ meetup.url }}">
-            {{ meetup | meetup_title }}
-          </a>
-        </h3>
-      </li>
+      {% if meetup.archived == true %}
+        <li>
+          <h3>
+            <a href="{{ meetup.url }}">
+              {{ meetup | meetup_title }}
+            </a>
+          </h3>
+        </li>
+      {% endif %}
     {% endfor %}
   </ul>
 </article>
