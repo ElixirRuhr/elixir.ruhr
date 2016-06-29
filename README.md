@@ -33,4 +33,4 @@ More information about using the Jekyll environment can be found in the
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request (PR)
-6. Preview on http://gh-pages-pr-<PR_NUMBER>.preview.elixir.ruhr (e.g. http://gh-pages-pr-2.preview.elixir.ruhr/)
+6. Preview on http://gh-pages-pr-\<PR_NUMBER\>.preview.elixir.ruhr (e.g. http://gh-pages-pr-2.preview.elixir.ruhr/)
