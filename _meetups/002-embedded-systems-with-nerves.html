@@ -3,16 +3,13 @@ section: meetups
 number: 002
 title: Nerves of Steel
 date: 2016-06-30 19:00:00
-archived: false
+archived: true
 ---
 
 <article class="meetup meetup-002">
   <h2>{{ page | meetup_title }}</h2>
   <p>
-    The <a href="/meetups/002-embedded-systems-with-nerves">next meetup</a> will be 30<sup>th</sup> June 2016.
-    Doors will open at 18:30, the talks are starting at 19:00.
-    The event will be free, but with a limited amount of space.
-    Please use our Meetup.com page for <a href="http://www.meetup.com/ElixirRuhr/events/231776809/"<abbr title="Répondez s'il vous plaît">RSVP</abbr></a>
+    Our second meetup happend on {{ page.date | nice_date }}.
     Special thanks to our <a href="#sponsors">sponsors</a> for providing drinks and snacks.
   </p>
 </article>
@@ -77,9 +74,28 @@ archived: false
   </ul>
 </article>
 
-<article class="location">
-  <h2>Location</h2>
-  <p>
-  {% include locations/das-labor.html %}
-  </p>
+<article class="gallery-wrapper">
+  <h2>Impressions</h2>
+  {% gallery 002 %}
+  images/galleries/002/img_0001.jpg
+  images/galleries/002/img_0002.jpg
+  images/galleries/002/img_0003.jpg
+  images/galleries/002/img_0004.jpg
+  images/galleries/002/img_0005.jpg
+  images/galleries/002/img_0006.jpg
+  images/galleries/002/img_0007.jpg
+  images/galleries/002/img_0008.jpg
+  images/galleries/002/img_0009.jpg
+  images/galleries/002/img_0010.jpg
+  images/galleries/002/img_0011.jpg
+  images/galleries/002/img_0012.jpg
+  images/galleries/002/img_0013.jpg
+  images/galleries/002/img_0014.jpg
+  images/galleries/002/img_0015.jpg
+  images/galleries/002/img_0016.jpg
+  images/galleries/002/img_0017.jpg
+  images/galleries/002/img_0018.jpg
+  images/galleries/002/img_0019.jpg
+  images/galleries/002/img_0020.jpg
+  {% endgallery %}
 </article>
