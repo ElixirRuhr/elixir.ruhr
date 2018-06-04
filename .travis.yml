@@ -1,17 +1,15 @@
 language: ruby
+git:
+  lfs_skip_smudge: true
 cache: bundler
 sudo: false
 script: bundle exec rake site:deploy --quiet
-rvm: "2.2"
+rvm: '2.2'
 env:
   global:
-    secure: "vTaKTElw9L/TczLo1of6EfNUG2gMdRAqlLI4V+4XH8NnpIvax4aBx/KHT2FZVIw0YcpJ5DcNAx8S2UXxrbZgALmkTQIQwQRBPm77eH2uQsJtYZPI1zeQF0HoqPD5cx07nLyvSMbLnRgsXrUTAdSqcyhn+AR5ZB7XS66sQ4yvhSZxirreBE0mDK/w9Yol35gj7+2dwHjNBm0LFOByW1PLc8LAHJnpBCLH61y4L5tdqOkJtAgmZNSzQVjMwmPnK+IpA7W86NqNs9fP13y7TV0bP7Y/rrJvXQzrOhlOSt/xBnUuSViqreuyYFCD2uZmTR3xGwj/jt1RR4bNbwoqKLCIfQrgqBgM9jsZ6nMb9mFIfaQ2gTxjPVQeAYE3rYNiAJamnSvA58JE1+wJo+KlZM5OFKmbA3+NL2O71itEQP7MKi7a9U94LSywowwkEUrYYiOYflSVoi+NUgweQKgCFhQ3VrXKihyoMWaJ8vHtaP41cBZZFyFlSB9dhxAXS9poPC/g5iKnu7rOs14rcrMVuyk+ri3po6fHVnpnPlxo4yD2Wiy07zGsye/c2LHxvKBo2lWzgFdzvtcCt8Z4bH+SvP+raIkIG6UUUD2CEqQHtf3XKys0jSpfTtc6FZyyYSiTqM6XTydr7ihJGwToeT/tsKSQhxCta5KzDSPhJ/GmuI4peSA="
+  - secure: mXetMfoowzBmWuTAm63EwJogUhnHagRVmPTescmmbVsvL7gS+yD2LbzENmJazYh4y9AaZKn09luSZ05SlneKd+KX0f9Hxq65voUtanXYmeTvsB8OKlx3SEGRE5/KvrZq/iILTz59KJ2dpbdazWYTTYvxKiDCBKbrBRMviDEdQBH7y/TG+naB3JGDQ45SSlMZWO/Vj7gxjoiI0HZ95Puc7Xu1KvBBjKuWlS++JcKc59/swtuRfbufIiIPI7JTQC8w6aINlv+qme9ujqeft9dUZoelxV7SCj92rlh0Wl2JjvPtLC3l85fJE0gIjgT535X9kNkZX5xOSJSw8O9pZ8nYQ73wKUt+g/9RvheTXIPnZVyMOjFJj+ScWYdoY270Vhic5/asd2vrpdFBigFybmrZNFQRpTG/K97oTe226xGHrWnHMq0gSqSsrwKZL9m3xWaW5h+AoUOeEMnFoQQty8k/GlYjtx8SIAjrQF7JnGOQi6jMzIoUFQVr9TDKC9tnsP5ReWaE/VLhyG6I6+btr1Goj/RHkTCAQucD18WEBSo68PoFK7aOnxQvEdLwszQT2voZYmEynBmN6/kodr3FHyUURVyaEl7eBSBYy0jUbQtHi0BpQ1O8dICJu6pDOccIMkSdpdnC2hvfAPwH9rejumAmjkWOZqYnOofU0iZCsEjVt7c=
+  - secure: HEMzbDuGm8WsapHrrptKYUZ0SWc6sOQVnmY3X6kBR17Fg49QNMAUFCb923TWz4Tadkqw++1caOeyK5EtRqk0++2nXtLLitJBPxcGrpHKT5d4bpjqCiv8zR6l+XnnClFZV68K0rFD8XV7d9sUYzz90p21qpvFbdGvWXUrOr7pzDyrolStnRwydFVvz1QDzJ3NE2/cJaVonhD3gDBdP1xqX5S15SbzRY91mQessPBRlxOg4q53cvwTxZ3+hq4My/0duHQexBrP2AXSnPgeij6mGOMub6COgSg6ml7rUqI7VurEZ5vkuR+HEE2uv6O7bMYMfMADRa03rmG1IBgt99+tZ8OICXu8+RUxt+Wq/+lT446Hp17iLU1udvK8jn5daujr5r8j5XbKrNFrGUMUCtAoZbVYWRkaI9PTY/Dd0z4Sf2MZtVk14iM11ja03WsVJAD9mN37nem0McsKemTbuvSxhHeqMur0V3mCIGNx2nR+RpwCZSdtwJ69eZPKpALCt3tsV7hBzlbxs5lLF1fBf/RnI8+Ut3X/rgpdqcz2prPQz34WO6f21ksML0goDXspzhCPDW2TrqjpXOZNdFh9WEFy35iGS54Ywfc8byFMIPLKdSh6OE7Z+XbgfcFDFnL7fcQuSPl6Rpi1lWt2Ss4uUkyNuMb4IOTk3oz1yyC7pGWBNDU=
+  - secure: oCs2k/v20jpiGW2Ag7GPq5fdFnUcZ9sSZL9gafwX6DToBiVwNOnrupaiw7HacZYBNlO3suvBE+7nnZm1f9WHUjfUVtXqoHhiNV0KkztnUlPXSJ+Tf89MC5Rn27VDwyfrogic895yo3l01PZ7RFmXCtw4XgqSEIPWzEV+wUVJCMvcMiWtSb6Z9PGyLTOt1dNkZRwtqwNu8q1zMlStl5DL5aWxA8k0mfWx0nVrFpbX/7iRlVtruHIqWeh57ZwDw/ahbDG/b1ij1bPt4x+0sHj5qNebr3gQ5ED3Em7Fu5QfiHggCpkZV57yIRi2HmE6LOYcnsn6+f9V/Fm05LYylnAR2vhsYsIUgmp3g6ZSEUIbDnMmInblJITtfWY4klGJ6W0p1D6LqvJzFHKw5eqTEjsXwVRTLPdpITSQlla8Sfq3fneDXfPT1oFa+dKWFkMQfZV3z+A0+E44GRq+EgkGyDLxSiHlEeQ0KUFe9FYppGzSpEhCWZ2oe6k4MMEDOsbyyj15xOHq1Q/v9z+qi9N/v1Oo9EZxzQIpDKzS8jfZ92aUmTFmlH+j4/9xj3sqYK+lrCLnWkHeB+Yh4U48LDk3j/ZleyBwa3k+c39hy7iGjzA2v/NqCkYjLT8RSFCWFuEUox2DHkgTlZxfhNpwLS9mIKfc/+l2EGR0duy/QWRiQI1LPQA=
 before_install:
-  - mkdir -p $HOME/bin
-  - wget https://github.com/github/git-lfs/releases/download/v1.1.2/git-lfs-linux-amd64-1.1.2.tar.gz
-  - tar xvfz git-lfs-linux-amd64-1.1.2.tar.gz && rm git-lfs-linux-amd64-1.1.2.tar.gz
-  - mv git-lfs-1.1.2/git-lfs $HOME/bin/git-lfs && rm -R git-lfs-1.1.2
-  - export PATH=$PATH:$HOME/bin/
-  - git-lfs install
-  - git-lfs env
-  - git-lfs pull
+- echo -e "machine github.com\n  login $GH_TOKEN" >> ~/.netrc
+- git lfs pull
