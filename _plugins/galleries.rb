@@ -26,7 +26,7 @@ module Jekyll
     end
 
     def block_contents
-      @nodelist[0].split(/\n/)
+      nodelist[0].split(/\n/)
                   .map {|x| x.strip }
                   .reject {|x| x.empty? }
                   .map do |line|
