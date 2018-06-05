@@ -1,6 +1,6 @@
 # Elixir.Ruhr
 
-Content for http://elixir.ruhr
+Content for https://elixir.ruhr
 
 ## Requirements
 
@@ -12,14 +12,14 @@ Therefor you have to setup it before cloning this repository:
 
 ## Installation
 
-Run the following command in your terminal using [Bundler](http://bundler.io)
+Run the following command in your terminal using [Bundler](https://bundler.io)
 to setup the environment:
 
     $ bundle install
 
 ## Usage
 
-You can preview your changes using the [Jekyll](http://jekyllrb.com) server:
+You can preview your changes using the [Jekyll](https://jekyllrb.com) server:
 
     $ jekyll serve
 
